@@ -1,19 +1,14 @@
 package ru.synergy.hiltretrofitjavagitsearch.adapter;
 
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
-
 import java.util.List;
-
 import ru.synergy.hiltretrofitjavagitsearch.R;
 import ru.synergy.hiltretrofitjavagitsearch.models.RecyclerData;
 
@@ -45,7 +40,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
+        if(listItems == null)
         return 0;
+        else
+            return listItems.size();
     }
 
 
